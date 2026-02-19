@@ -53,7 +53,6 @@ spring.datasource.password=password
 
 ### API Access
 * **Base URL**: http://localhost:8080
-* **Swagger UI**: http://localhost:8080/swagger-ui/index.html
 
 ## Related repositories
 1. [Frontend](https://github.com/VukRadmilovic/uber-like-frontend)
