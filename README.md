@@ -18,25 +18,42 @@ This project is an Uber-like application that allows users to request transporta
 
 4. Administrators - They can create driver accounts, view information and ride status of any driver, access driver history and generate reports. Administrators can block users and drivers, respond to PANIC notifications, and provide 24/7 live chat support.
 
-## How to Run
+## How to Run 
+### Prerequisites
+* **Java 17** (Verify with `java -version`)
+* **PostgreSQL** (Database name: `uber_db`)
 
-1. Clone the repository
-2. Navigate to the project directory
-3. Install the necessary dependencies:
-
+### Installation & Run
+1. Clone the Repository
+```bash
+git clone https://github.com/VukRadmilovic/uber-like-backend.git
+cd uber-like-backend/uber-like-backend
 ```
-mvn install
+2. Configure Database
+
+Edit `src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/uber_db
+spring.datasource.username=postgres
+spring.datasource.password=password
 ```
 
-4. Run the application:
-
+3. Build and Run (Windows)
+```bash
+.\mvnw clean install
+.\mvnw spring-boot:run
 ```
-mvn spring-boot:run
+
+4. Build and Run (Linux/macOS)
+```bash
+./mvnw clean install
+./mvnw spring-boot:run
 ```
 
-5. The backend server should now be running on `http://localhost:8080`.
-
-Note: Please ensure that you have Java and Maven installed on your system before running the application.
+### API Access
+* **Base URL**: http://localhost:8080
+* **Swagger UI**: http://localhost:8080/swagger-ui/index.html
 
 ## Related repositories
 1. [Frontend](https://github.com/VukRadmilovic/uber-like-frontend)
